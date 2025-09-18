@@ -217,7 +217,7 @@ line for you in fact! All you have to do is un-comment it out. :)
 #### Advanced: The `to_param` Method
 
 To understand the concept of a parameter, let's take a look at an example URL:
-www.facebook.com/your-name.
+<www.facebook.com/your-name>.
 
 The "your-name" part of the above URL might be referred to as a slug. Another
 term for this section of a URL is "parameter" or "param". One common task
@@ -238,7 +238,7 @@ understand the general purpose of having a method like the `to_param` method.
 
 Let's take a look at the `.initialize` methods of both the `Song` and `Artist` class:
 
-#### `lib/song.rb`
+##### `lib/song.rb`
 
 ```ruby
  def initialize
@@ -246,7 +246,7 @@ Let's take a look at the `.initialize` methods of both the `Song` and `Artist` c
   end
 ```
 
-#### `lib/artist.rb`
+##### `lib/artist.rb`
 
 ```ruby
 def initialize
@@ -276,7 +276,7 @@ this case, we need to abstract away the literal reference to the `@@songs` and
 
 Lucky for us, we already have class methods that wrap these class variables:
 
-#### `lib/song.rb`
+##### `lib/song.rb`
 
 ```ruby
  def self.all
@@ -284,7 +284,7 @@ Lucky for us, we already have class methods that wrap these class variables:
  end
 ```
 
-#### `lib/artist.rb`
+##### `lib/artist.rb`
 
 ```ruby
 def self.all
@@ -297,7 +297,7 @@ Let's begin by refactoring the content of both `.initialize` methods to use the
 programmatically access the class of the instance that we are operating on
 inside the `.initialize` method? Take a look below:
 
-#### `lib/song.rb`
+##### `lib/song.rb`
 
 ```ruby
 def initialize
@@ -305,7 +305,7 @@ def initialize
 end
 ```
 
-#### `lib/artist.rb`
+##### `lib/artist.rb`
 
 ```ruby
 def initialize
@@ -400,7 +400,7 @@ method in the module.
 The `.initialize` methods in our `Song` and `Artist` classes share the
 following line:
 
-```
+```rb
 def initialize
   self.class.all << self
 end
